@@ -40,10 +40,10 @@ pipeline {
     post {
         always {
             cleanWs()
-            slackSend (channel: '#devops', color: 'good', message: "Job ${env.JOB_NAME} build ${env.BUILD_NUMBER} completed successfully.")
+            slackSend (channel: '#devops-team', color: 'good', message: "Job ${env.JOB_NAME} build ${env.BUILD_NUMBER} completed successfully.")
         }
         failure {
-            slackSend (channel: '#devops', color: 'danger', message: "Job ${env.JOB_NAME} build ${env.BUILD_NUMBER} failed.")
+            slackSend (channel: '#devops-team', color: 'danger', message: "Job ${env.JOB_NAME} build ${env.BUILD_NUMBER} failed.")
         }
     }
 }
