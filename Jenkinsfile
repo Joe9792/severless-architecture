@@ -5,7 +5,7 @@ pipeline {
         // No need to pass AWS credentials here
     }
 
-    stages {
+#    stages {
         stage('Checkout') {
             steps {
                 git 'https://github.com/your-repo/serverless-architecture.git'
